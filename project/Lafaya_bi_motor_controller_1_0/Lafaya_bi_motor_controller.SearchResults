@@ -1,0 +1,25 @@
+---- dataEEFlags Matches (24 in 3 files) ----
+DEE Emulation 16-bit.c (data):DATA_EE_FLAGS dataEEFlags;
+DEE Emulation 16-bit.c (data):    dataEEFlags_sh = dataEEFlags.val;
+DEE Emulation 16-bit.c (data):    dataEEFlags.val = dataEEFlags_sh;   //Restore status flags
+DEE Emulation 16-bit.c (data):    dataEEFlags_sh = dataEEFlags.val;
+DEE Emulation 16-bit.c (data):            dataEEFlags.val = dataEEFlags_sh;
+DEE Emulation 16-bit.c (data):    dataEEFlags.val = dataEEFlags_sh;       //Restore status flags
+DEE Emulation 16-bit.h (data):#define GetaddrNotFound() dataEEFlags.addrNotFound
+DEE Emulation 16-bit.h (data):#define SetaddrNotFound(x) dataEEFlags.addrNotFound = x
+DEE Emulation 16-bit.h (data):#define GetPageCorruptStatus() dataEEFlags.pageCorrupt
+DEE Emulation 16-bit.h (data):#define SetPageCorruptStatus(x) dataEEFlags.pageCorrupt = x
+DEE Emulation 16-bit.h (data):#define GetPageExpiredPage() dataEEFlags.expiredPage
+DEE Emulation 16-bit.h (data):#define SetPageExpiredPage(x) dataEEFlags.expiredPage = x
+DEE Emulation 16-bit.h (data):#define GetPageIllegalAddress() dataEEFlags.IllegalAddress
+DEE Emulation 16-bit.h (data):#define SetPageIllegalAddress(x) dataEEFlags.IllegalAddress = x
+DEE Emulation 16-bit.h (data):#define GetPagePackBeforeInit() dataEEFlags.packBeforeInit
+DEE Emulation 16-bit.h (data):#define SetPagePackBeforeInit(x) dataEEFlags.packBeforeInit = x
+DEE Emulation 16-bit.h (data):#define GetPagePackBeforePageFull() dataEEFlags.packBeforePageFull
+DEE Emulation 16-bit.h (data):#define SetPagePackBeforePageFull(x) dataEEFlags.packBeforePageFull = x
+DEE Emulation 16-bit.h (data):#define GetPagePackSkipped() dataEEFlags.packSkipped
+DEE Emulation 16-bit.h (data):#define SetPagePackSkipped(x) dataEEFlags.packSkipped = x
+DEE Emulation 16-bit.h (data):#define GetPageWriteError() dataEEFlags.writeError
+DEE Emulation 16-bit.h (data):#define SetPageWriteError(x) dataEEFlags.writeError = x
+DEE Emulation 16-bit.h (data):extern DATA_EE_FLAGS dataEEFlags;
+Main.c: 	dataEEFlags.val = 0;
